@@ -1,5 +1,5 @@
 <p>Role Waiting List:</p>
-<p id="DPS Queue"></p>
+<p id="DPSQueue"></p>
 
 <html>
 <script>
@@ -9,7 +9,7 @@ let timer = 0;
 let myVar =  setInterval(queueTimer, 1000);
 
 function queueTimer(){
- let counter = Math.floor(Math.random * counter);
- document.getElementById("DPS Queue").innerHTML = counter.toString();
+ counter = Math.floor(Math.random * counter);
+ console.log('Role Waiting List Number: ${counter}');
 </script>
 </html>
