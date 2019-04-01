@@ -1,1 +1,15 @@
-Hello World
+<p>Role Waiting List:</p>
+<p id="DPS Queue"></p>
+
+<html>
+<script>
+let counter = 10000000;
+let timer = 0;
+
+let myVar =  setInterval(queueTimer, 1000);
+
+function queueTimer(){
+ let counter = Math.floor(Math.random * counter);
+ document.getElementById("DPS Queue").innerHTML = counter.toString();
+</script>
+</html>
