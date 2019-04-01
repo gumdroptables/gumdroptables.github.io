@@ -1,16 +1,48 @@
+<!DOCTYPE html>
 <html>
 <body>
+<p>Duty Roulette: Patch</p>
 <p id="DPSQueue"></p>
-
+<label id="DPSTimer"></label><label id="minutes">00</label>:<label id="seconds">00</label>m
+<p>Estimated Wait Time: 5m
 <script>
-let counter = 10;
-let timer = 0;
+let counter = 1000000;
+myTimer();
+let myVar = setInterval(myTimer, getRandomInt(1,20)*1000);
 
-let myVar =  setInterval(queueTimer, 1000);
+function myTimer(){
+ counter = getRndInteger(1, counter*2);
+ document.getElementById("DPSQueue").innerHTML = "Role Waiting List Number: " +counter.toString();
+ document.getElementById("DPSTimer").innerHTML = "Estimated Time Passed: ";
+}
 
-function queueTimer(){
- counter = Math.floor(Math.random * counter);
- document.getElementById("DPSQueue").innerHTML = 'Role Waiting List Number: ';
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
+}
+
+let totalSeconds = 0;
+setInterval(setTime, 1000);
+
+function setTime() {
+  ++totalSeconds;
+  document.getElementById("seconds").innerHTML = pad(totalSeconds % 60);
+  document.getElementById("minutes").innerHTML = pad(parseInt(totalSeconds / 60));
+}
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function pad(val) {
+  var valString = val + "";
+  if (valString.length < 2) {
+    return "0" + valString;
+  } else {
+    return valString;
+  }
+}
 </script>
 
 
