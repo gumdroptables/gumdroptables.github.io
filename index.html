@@ -8,7 +8,7 @@
 <script>
 let counter = 1000000;
 myTimer();
-let myVar = setInterval(myTimer, getRandomInt(1,20)*1000);
+let myVar = setInterval(myTimer, Math.floor(getRandomInt(1,10)*1000));
 
 function myTimer(){
  counter = getRndInteger(1, counter*2);
