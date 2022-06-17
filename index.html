@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Dragoon Ability Generator</p>
+<button onclick="makeAbility();">Generate</button> <p></p>
+<img src="" id="Icon">
+<div id="bg"></div>
+<label id="Prefix"></label><label id="Midfix"></label> <label id="Suffix"></label>
+<script>
+var canvas = document.createElement("canvas");
+var img = document.getElementById("Icon");
+var ctx = canvas.getContext("2d");
+
+const prefixes = ["Dragon","Wyvern","Full","Chaotic","Heavens","High","Raiden","Wyrm","Draconian","Coerthan","Mirage","Sonic","Geirs","Nast","Wheeling","Fang","Battle","Chaos","Doom","Elusive","Lance","Vorpal"];
+const midfixes = ["wind","claw","tail","bowel","kogul","diver", "", "", "", "", "", ""];
+const suffixes = ["Dive","Thrust","Spike","Spring","and Claw","Surge","Charge","Jump","Sight","Torment","Fury"];
+const images = ["https://img.finalfantasyxiv.com/lds/d/a456526b20c613a31c9ff03a7cd8d69ab328a4c8.png",
+"https://img.finalfantasyxiv.com/lds/d/85a78cf7b49d80ab94aa206b385563ffa0222346.png",
+"https://img.finalfantasyxiv.com/lds/d/eb7e59cbec93afbdf7a3cecd0e164c545ea8dec2.png",
+"https://img.finalfantasyxiv.com/lds/d/b34933ec0ea122c75fd1deeb69f3b9df942dbdc1.png",
+"https://img.finalfantasyxiv.com/lds/d/d5052c9c0d1bf846c9a4fb70497dd1cea97ceca6.png",
+"https://img.finalfantasyxiv.com/lds/d/34a78b866a4906267ee8f0e93457cb22b5550b9d.png",
+"https://img.finalfantasyxiv.com/lds/d/cb90fa2f691cd58f5b068f6088550b3d56c2bd73.png",
+"https://img.finalfantasyxiv.com/lds/d/f33d8ab6bf2a7e902b9292016eefbbb0fe551548.png",
+"https://img.finalfantasyxiv.com/lds/d/410e90de2429654f6a4912e15c1d07597f765f53.png",
+"https://img.finalfantasyxiv.com/lds/d/1e6e09c76f8847d3caf2ee330400848219460dfa.png",
+"https://img.finalfantasyxiv.com/lds/d/6b6c04f13f24687229d5c6fbd03cca7b1cd2abbc.png",
+"https://img.finalfantasyxiv.com/lds/d/b77850f0a67953c4b4a13228788bdc1ec41c20fc.png",
+"https://img.finalfantasyxiv.com/lds/d/1ccffd13759a4491f95494464c6d10dc33c006af.png",
+"https://img.finalfantasyxiv.com/lds/d/508f9edf2563db3319c3f623ce5d94517062263c.png",
+"https://img.finalfantasyxiv.com/lds/d/4fe2230dcc26896793e2936288fd25252dcfc56c.png",
+"https://img.finalfantasyxiv.com/lds/d/a8a45f08c2c5db904616f91470667fe4aaa6bcc5.png",
+"https://img.finalfantasyxiv.com/lds/d/9997d1e9e3008de62095f170806afc46bf8c0512.png",
+"https://img.finalfantasyxiv.com/lds/d/9457aa084f7bf99d66ad2c32318a7377886fa5b1.png",
+"https://img.finalfantasyxiv.com/lds/d/9a92efac99d9172bda997702548f803fb035a8ce.png",
+"https://img.finalfantasyxiv.com/lds/d/83da9c48674e13d357d7ff8ba8fba6b49f287f79.png",
+"https://img.finalfantasyxiv.com/lds/d/97ac6d936a5ade6f37ed4395355893eb976a477a.png",
+"https://img.finalfantasyxiv.com/lds/d/673868536e6be70ed3ae3e1b4be66579b572e324.png",
+"https://img.finalfantasyxiv.com/lds/d/864834c5502d69496057326478a42ef74a504af3.png",
+"https://img.finalfantasyxiv.com/lds/d/d63e1dd2c2cb09e371caf50f997b65f8148c578b.png",
+"https://img.finalfantasyxiv.com/lds/d/235f159d863cc53374d2029a1bfb141828fad5b5.png",
+"https://img.finalfantasyxiv.com/lds/d/51e0251a0915bf36c3c804a760c8b3eaa3fe869e.png",
+"https://img.finalfantasyxiv.com/lds/d/e8ab8aa66c28e6c6fd4acf489417d7e7e2d5acc6.png",
+"https://img.finalfantasyxiv.com/lds/d/e34337371ce368cb087a6c9cf3cad150271b7077.png",
+"https://img.finalfantasyxiv.com/lds/d/e61f89ed9db5020d7733920451f4d1809fe52c6b.png"];
+
+function makeAbility(){
+ document.getElementById("Prefix").innerHTML = prefixes[Math.floor(Math.random()*prefixes.length)];
+ document.getElementById("Midfix").innerHTML = midfixes[Math.floor(Math.random()*midfixes.length)];
+ document.getElementById("Suffix").innerHTML = suffixes[Math.floor(Math.random()*suffixes.length)];
+ img.src = images[Math.floor(Math.random()*images.length)];
+}
+
+</script>
+
+
+</body>
+</html>
